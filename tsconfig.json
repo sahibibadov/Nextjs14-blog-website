@@ -10,6 +10,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    
     "jsx": "preserve",
     "incremental": true,
     "plugins": [
@@ -21,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/middleware.ts", "src/lib/auth.s", "src/lib/auth.config.ts", "src/lib/actions.ts", "src/lib/db/connectDb.ts"],
   "exclude": ["node_modules"]
 }
