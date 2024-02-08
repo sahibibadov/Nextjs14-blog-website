@@ -45,7 +45,7 @@ const CustomDrawer: React.FC<Props> = ({ ...props }) => {
           },
         },
       }}
-      className="rounded-md max-w-sm w-full h-screen max-h-screen"
+      className="rounded-md max-w-xs [&>button]:top-2 [&>button]:right-3 [&>button>svg]:text-xl md:max-w-sm w-full h-dvh max-h-dvh "
     >
       <ModalContent>{(onClose) => <>{props.children}</>}</ModalContent>
     </Modal>

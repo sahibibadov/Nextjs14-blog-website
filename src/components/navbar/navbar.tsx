@@ -18,7 +18,10 @@ export default async function Navbar() {
   // console.log("session", session);
 
   return (
-    <NextNavbar maxWidth="xl" className="shadow-md dark:shadow-white/10 ">
+    <NextNavbar
+      maxWidth="xl"
+      className="shadow-md dark:shadow-white/10 [&>header]:max-md:px-3 [&>header]:max-md:gap-2"
+    >
       {/* logo */}
       <NavbarBrand>
         <Image
@@ -34,7 +37,7 @@ export default async function Navbar() {
         <Links isAdmin={session?.user?.isAdmin} />
       </NavbarContent>
       {/* login | user */}
-      <NavbarContent justify="end" className="hidden md:flex">
+      <NavbarContent justify="end">
         {session?.user ? (
           <form action={handleLogout}>
             <Button type="submit" variant="flat">
@@ -42,15 +45,9 @@ export default async function Navbar() {
             </Button>
           </form>
         ) : (
-          <>
-            <Button as={Link} href="/login" variant="light">
-              Login
-            </Button>
-
-            <Button as={Link} href="/register" variant="flat">
-              Sign Up
-            </Button>
-          </>
+          <Button as={Link} href="/login" variant="flat">
+            Login
+          </Button>
         )}
       </NavbarContent>
       {/* them button */}
