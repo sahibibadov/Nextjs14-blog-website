@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "@/provider/next-provider";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -30,6 +31,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <Toaster position="top-right" />
+          <SpeedInsights />
         </Providers>
       </body>
     </html>
