@@ -32,7 +32,14 @@ const About = () => {
           {/* count up */}
           <div className="flex flex-col items-center md:items-start">
             <div className="text-primary text-2xl font-semibold mb-1 ">
-              <Countup start={1} end={10} duration={3} /> K+
+              <Countup
+                enableScrollSpy
+                start={1}
+                end={10}
+                duration={3}
+                delay={0}
+              />{" "}
+              K+
             </div>
             <p className="text-gray-500 dark:text-gray-400">
               Year of experience
@@ -41,7 +48,14 @@ const About = () => {
           {/* count up */}
           <div className="flex flex-col items-center md:items-start">
             <div className="text-primary text-2xl font-semibold  mb-1">
-              <Countup start={50} end={150} duration={5} /> K+
+              <Countup
+                enableScrollSpy
+                start={50}
+                end={150}
+                duration={5}
+                delay={0}
+              />{" "}
+              K+
             </div>
             <p className="text-gray-500 dark:text-gray-400">People reached</p>
           </div>
